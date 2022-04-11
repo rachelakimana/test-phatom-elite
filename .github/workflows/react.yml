@@ -19,8 +19,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm i
-      - run: npm test
       - run: npm run build --if-present
+      - run: npm run coverage
 
   coverage:
     needs: [build]
@@ -36,5 +36,4 @@ jobs:
           CI: "true"
           CC_TEST_REPORTER_ID: 5285d2afdef079c26e8892f3d70ab3e6254c4063685cccb155f349d09c063d0e
         with:
-          coverageCommand: npm run coverage
           debug: true
