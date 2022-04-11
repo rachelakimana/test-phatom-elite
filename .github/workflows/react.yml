@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
         with:
-          node-version: "12"
+          node-version: "16.14.0"
       - run: npm build
       - uses: paambaati/codeclimate-action@v2.2.4
         env:
