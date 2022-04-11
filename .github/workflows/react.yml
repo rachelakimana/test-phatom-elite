@@ -21,3 +21,19 @@ jobs:
       - run: npm i
       - run: npm test
       - run: npm run build --if-present
+
+  coverage:
+    needs: [build]
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: "16"
+      - run: npm build
+      - uses: paambaati/codeclimate-action@v2.2.4
+        env:
+          CC_TEST_REPORTER_ID: 023c090c9cd0cb6f5b749abf467fef9455d6cde38422b7cbbbfcbf3412efec7b
+        with:
+          coverageCommand: npm coverage
