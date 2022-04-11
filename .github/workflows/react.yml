@@ -34,6 +34,6 @@ jobs:
       - run: npm build
       - uses: paambaati/codeclimate-action@v2.2.4
         env:
-          CC_TEST_REPORTER_ID: 023c090c9cd0cb6f5b749abf467fef9455d6cde38422b7cbbbfcbf3412efec7b
+          CC_TEST_REPORTER_ID: 5285d2afdef079c26e8892f3d70ab3e6254c4063685cccb155f349d09c063d0e
         with:
           coverageCommand: npm coverage
