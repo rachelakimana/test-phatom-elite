@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const InputForm = () => {
-console.log("hello there");
+  console.log("hello there");
   return (
     <div>
       <h1>Login Form</h1>
       <form>
-        <label htmlFor="">Name</label>
-        <input type="text" />
         <label htmlFor="">Email phone</label>
         <input type="text" />
         <label htmlFor="">Password</label>
@@ -15,6 +13,6 @@ console.log("hello there");
       </form>
     </div>
   );
-}
+};
 
-export default InputForm
+export default InputForm;
