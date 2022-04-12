@@ -41,3 +41,14 @@ jobs:
         with:
           debug: true
           coverageCommand: npm run coverage
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - uses: actions/checkout@v3
+
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "test-bus-tracker"
+          heroku_email: "rachelakimana@gmail.com"
