@@ -6,6 +6,8 @@ const InputForm = () => {
     <div>
       <h1>Login Form</h1>
       <form>
+        <label htmlFor="">Name</label>
+        <input type="text" />
         <label htmlFor="">Email phone</label>
         <input type="text" />
         <label htmlFor="">Password</label>
